@@ -8,7 +8,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
@@ -28,6 +27,6 @@ public class UserRegistrationServiceTest {
 
         userRegistrationService.registerUser(user);
 
-        verify(userRepository, times(1)).addUser(user);
+        verify(userRepository, times(1)).save(user);
     }
 }
